@@ -10,8 +10,8 @@ requirejs.config({
         src : '../src',
         build: '../../dist',
         jquery : 'jquery.min',
-        jqueryui : 'jqueryui',
-        NHLClockWidget : '../../dist/NHLClockWidget',
+        //NHLclock : '../src/NHLClockController',
+        NHLclock : '../../dist/NHLclock',
         bootstrap: 'bootstrap/js/bootstrap'
     },
     shim : {
@@ -21,14 +21,7 @@ requirejs.config({
                 return this.$.noConflict(false);
             }
         },
-        'jqueryui' : {
-            deps : ['jquery'],
-            exports : 'jqueryui',
-            init : function() {
-                return this.jQuery.ui;
-            }
-        },
-        'NHLClockWidget' : {
+        'NHLclock' : {
             deps : ['jquery']
         },
         'bootstrap' : {

@@ -25,11 +25,16 @@
         </div>
         
         <script id="demo">
-            require(['jquery', 'NHLClockWidget'], function($, _) {
+            require(['jquery', 'NHLclock'], function($, NHLclock) {
 
-                var $demoDiv = $('#clock-one');
+                var $clockOne = $('#clock-one');
+                var $clockTwo = $('#clock-two');
+                var $clockThree = $('#clock-three');
 
-                $demoDiv.NHLclock();
+				var clockOne = new NHLclock($clockOne, 20, 0, 'Clock 1');
+				var clockTwo = new NHLclock($clockTwo, 20, 0, 'Clock 2');
+				var clockThree = new NHLclock($clockThree, 20, 0, 'Clock 3');
+                
             });
 		</script>
 	</body>

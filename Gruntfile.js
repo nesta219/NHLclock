@@ -14,9 +14,9 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['assets/src/NHLClockWidget.js',
+        src: ['assets/src/NHLClockController.js',
               'assets/src/NHLClockView.js'],
-        dest: 'dist/NHLClockWidget.js'
+        dest: 'dist/NHLclock.js'
       },
     },
     less : {
