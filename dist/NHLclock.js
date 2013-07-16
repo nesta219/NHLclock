@@ -42,7 +42,7 @@ define('NHLclock', ['jquery', 'src/NHLClockView'],
                 
                 that.view.updateTime(that.getFormattedTime());
                 
-                if(that.countdown.getSeconds() < 10 && that.countdown.getSeconds() > 0){
+                if(that.countdown.getSeconds() <= 10 && that.countdown.getSeconds() > 0 && that.countdown.getMinutes() === 0){
                     that.view.showNearEnd();
                 }
                 else if(that.countdown.getTime() <= 0){
