@@ -1,0 +1,10 @@
+{
+  "name": "nhl-clock",
+  "version": "0.1.0",
+  "devDependencies": {
+        "grunt-contrib-concat": "~0.1.2",
+		"grunt-contrib-clean": "~0.4.0",       
+		"grunt-contrib-less": "0.5.0",
+		"grunt": "~0.4.1"
+  }
+}
