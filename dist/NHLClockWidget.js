@@ -3,6 +3,7 @@ define('NHLClockWidget', ['jquery', 'jqueryui'], function($) {
 
     return $.widget('custom.NHLclock', {
         options : {
+            team : 'PHI' //Flyers are our default team, OF COURSE
         },
         _create : function() {
             debugger;
@@ -22,3 +23,4 @@ define('NHLClockWidget', ['jquery', 'jqueryui'], function($) {
         }
     });
 });
+

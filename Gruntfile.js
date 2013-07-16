@@ -13,14 +13,10 @@ module.exports = function(grunt) {
       files: ['dist/NHLclock.js', 'dist/styles.css']
     },
     concat: {
-      options: {
-        banner: 'NHLclock',
-        stripBanners: true
-      },
       dist: {
         src: ['assets/src/NHLClockWidget.js',
               'assets/src/NHLClockView.js'],
-        dest: 'dist/NHLclock.js'
+        dest: 'dist/NHLClockWidget.js'
       },
     },
     less : {

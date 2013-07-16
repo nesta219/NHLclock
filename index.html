@@ -17,6 +17,20 @@
                 </div>
                 <div class="span3"></div>
             </div>
+            <div class="row">
+            	<div class="span4" id="clock-one"></div>
+            	<div class="span4" id="clock-two"></div>
+            	<div class="span4" id="clock-three"></div>
+            </div>
         </div>
+        
+        <script id="demo">
+            require(['jquery', 'NHLClockWidget'], function($, _) {
+
+                var $demoDiv = $('#clock-one');
+
+                $demoDiv.NHLclock();
+            });
+		</script>
 	</body>
 </html>

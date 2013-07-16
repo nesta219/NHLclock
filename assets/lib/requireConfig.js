@@ -1,6 +1,6 @@
 requirejs.config({
     //By default load any module IDs from js/lib
-    baseUrl : 'assets/libs',
+    baseUrl : 'assets/lib',
     //except, if the module ID starts with "app",
     //load it from the js/app directory. paths
     //config is relative to the baseUrl, and
@@ -10,9 +10,9 @@ requirejs.config({
         src : '../src',
         build: '../../dist',
         jquery : 'jquery.min',
-        NHLHeadlinesWidget : '../../dist/NHLClockWidget',
-        bootstrap: 'bootstrap/js/bootstrap',
-        text : 'text'
+        jqueryui : 'jqueryui',
+        NHLClockWidget : '../../dist/NHLClockWidget',
+        bootstrap: 'bootstrap/js/bootstrap'
     },
     shim : {
         'jquery' : {
@@ -28,12 +28,8 @@ requirejs.config({
                 return this.jQuery.ui;
             }
         },
-
-        'underscore' : {
-            exports : '_'
-        },
         'NHLClockWidget' : {
-            deps : ['jquery', 'jqueryui', 'underscore']
+            deps : ['jquery']
         },
         'bootstrap' : {
             deps : ['jquery']
