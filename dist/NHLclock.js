@@ -53,7 +53,12 @@ define('NHLclock', ['jquery', 'src/NHLClockView'],
             }
         },
         resetTimer : function(){
+            if(this.timer !== null){
+                clearInterval(this.timer);
+            }
             
+            this.countdown = new Date((this.defaultMinutes * 60 * 1000) + (this.defaultSeconds * 1000));
+            this.view.updateTime(this.getFormattedTime());
         }
     });
     
