@@ -63,7 +63,6 @@ define('NHLclock', ['jquery', 'src/NHLClockView'],
             
             this.countdown = new Date((this.defaultMinutes * 60 * 1000) + (this.defaultSeconds * 1000));
             this.view.resetClock(this.getFormattedTime());
-            //this.view.updateTime();
         }
     });
     
@@ -81,7 +80,6 @@ define(['jquery'], function($) {'use strict';
     var resetButtonMarkup = '<button class="btn btn-inverse">Reset</button>';
 
     var NHLClockView = function(controller, $element, title) {
-        //construct view
         this.controller = controller;
         this.$parentElement = $element;
         

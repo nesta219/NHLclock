@@ -10,7 +10,6 @@ requirejs.config({
         src : '../src',
         build: '../../dist',
         jquery : 'jquery.min',
-        //NHLclock : '../src/NHLClockController',
         NHLclock : '../../dist/NHLclock',
         bootstrap: 'bootstrap/js/bootstrap'
     },

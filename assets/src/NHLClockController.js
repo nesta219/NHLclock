@@ -63,7 +63,6 @@ define('NHLclock', ['jquery', 'src/NHLClockView'],
             
             this.countdown = new Date((this.defaultMinutes * 60 * 1000) + (this.defaultSeconds * 1000));
             this.view.resetClock(this.getFormattedTime());
-            //this.view.updateTime();
         }
     });
     

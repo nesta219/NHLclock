@@ -22,6 +22,11 @@
             	<div class="span4" id="clock-two"></div>
             	<div class="span4" id="clock-three"></div>
             </div>
+            <div class="row">
+            	<div class="span4"></div>
+            	<div class="span4" id="clock-four"></div>
+            	<div class="span4"></div>
+            </div>
         </div>
         
         <script id="demo">
@@ -30,10 +35,12 @@
                 var $clockOne = $('#clock-one');
                 var $clockTwo = $('#clock-two');
                 var $clockThree = $('#clock-three');
+                var $clockFour = $('#clock-four');
 
 				var clockOne = new NHLclock($clockOne, 20, 0, 'Clock 1');
 				var clockTwo = new NHLclock($clockTwo, 20, 0, 'Clock 2');
-				var clockThree = new NHLclock($clockThree, 0, 15, 'Clock 3');
+				var clockThree = new NHLclock($clockThree, 20, 0, 'Clock 3');
+				var clockFour = new NHLclock($clockFour, 0, 30, 'Pull your goalie');
                 
             });
 		</script>

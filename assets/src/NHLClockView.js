@@ -8,7 +8,6 @@ define(['jquery'], function($) {'use strict';
     var resetButtonMarkup = '<button class="btn btn-inverse">Reset</button>';
 
     var NHLClockView = function(controller, $element, title) {
-        //construct view
         this.controller = controller;
         this.$parentElement = $element;
         
