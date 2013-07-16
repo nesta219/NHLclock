@@ -36,6 +36,24 @@ define(['jquery'], function($) {'use strict';
         updateTime : function(time) {
             this.$clock.html(time);
         },
+        resetClock : function(time){
+            if(this.$clock.is('.finished')){
+                this.$clock.removeClass('finished');    
+            }
+            
+            if(this.$clock.is('.near-finished')){
+                this.$clock.removeClass('near-finished');
+            }
+            
+            this.updateTime(time);
+        },
+        showNearEnd : function(){
+            this.$clock.addClass('near-finished');
+        },
+        showFinished : function(){
+            this.$clock.removeClass('near-finished');
+            this.$clock.addClass('finished');  
+        },
         _attachEventHandlers : function() {
             var that = this;
             this.$startButton.on('click', function() {

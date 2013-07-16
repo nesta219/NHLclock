@@ -42,8 +42,12 @@ define('NHLclock', ['jquery', 'src/NHLClockView'],
                 
                 that.view.updateTime(that.getFormattedTime());
                 
-                if(that.countdown.getTime() <= 0){
+                if(that.countdown.getSeconds() <= 10 && that.countdown.getSeconds() > 0){
+                    that.view.showNearEnd();
+                }
+                else if(that.countdown.getTime() <= 0){
                     clearInterval(that.timer);
+                    that.view.showFinished();
                 }      
             }, 1000);
         },
@@ -58,7 +62,8 @@ define('NHLclock', ['jquery', 'src/NHLClockView'],
             }
             
             this.countdown = new Date((this.defaultMinutes * 60 * 1000) + (this.defaultSeconds * 1000));
-            this.view.updateTime(this.getFormattedTime());
+            this.view.resetClock(this.getFormattedTime());
+            //this.view.updateTime();
         }
     });
     

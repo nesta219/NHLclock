@@ -1,3 +1,33 @@
 .hidden {
   display: none;
 }
+.clock-container {
+  background-color: #c0c0c0;
+  float: left;
+  padding: 10px;
+  border-radius: 4px;
+}
+.clock-title {
+  text-align: center;
+}
+.clock {
+  text-align: center;
+}
+@-webkit-keyframes blink {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    opacity: 0.0;
+  }
+}
+.finished {
+  color: red;
+  -webkit-animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  -webkit-animation-duration: 1s;
+}
+.near-finished {
+  color: red;
+}
